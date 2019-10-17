@@ -43,7 +43,7 @@ class App extends Component {
       <div className='tc f1 '>
       <h1>RoboFriends</h1>
       <Searchbox searchChange={onSearchChange}/> 
-      <Scroll><Errorboundary><Cardlist robots={filterrobots}/></Errorboundary></Scroll></div>)
+      <Errorboundary><Cardlist robots={filterrobots}/></Errorboundary></div>)
    }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(App);
