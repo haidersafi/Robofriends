@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import Cardlist from'../Components/Cardlist'
 import Searchbox from '../Components//Searchbox';
 import './App.css'
-import Scroll from '../Components//Scroll'
 import Errorboundary from '../Components/Errorboundary';
+import Scroll from '../Components/Scroll';
 
 
 import { setSearchField,requestRobots } from '../action';
@@ -43,7 +43,7 @@ class App extends Component {
       <div className='tc f1 '>
       <h1>RoboFriends</h1>
       <Searchbox searchChange={onSearchChange}/> 
-      <Errorboundary><Cardlist robots={filterrobots}/></Errorboundary></div>)
+      <Scroll><Errorboundary><Cardlist robots={filterrobots}/></Errorboundary></Scroll></div>)
    }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(App);
